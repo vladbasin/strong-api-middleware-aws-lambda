@@ -101,7 +101,7 @@ class MyFunction implements IFunction<RequestPayload, ResponseDataPayload> {
 }
 ```
 
-5. Call `handleStrongApiLambdaRequest()` when you want to process AWS Lambda function
+6. Call `handleStrongApiLambdaRequest()` when you want to process AWS Lambda function
 
 ```typescript
 handleStrongApiLambdaRequest({
@@ -117,7 +117,7 @@ handleStrongApiLambdaRequest({
     },
     // configure response handling
     response: {
-        // process request handling error
+        // process request handling failure
         processFailure: {
             options: {
                 // output possibly sensitive information (useful for debugging)
