@@ -2,14 +2,14 @@ import { APIGatewayProxyResult } from 'aws-lambda';
 import { RawApiResponseType } from '@vladbasin/strong-api-middleware';
 import { unwrapMaybeNullableRecord } from '.';
 
-export const formatResponse = (response: RawApiResponseType): APIGatewayProxyResult => {
+export const mapRawApiResponseToGwProxyResult = (response: RawApiResponseType): APIGatewayProxyResult => {
     const { statusCode, headers, multiValueHeaders, body } = response;
 
     return {
         statusCode,
-        headers: unwrapMaybeNullableRecord(headers),
+        headers: unwrapMaybeNullableRecord(headers, t => t),
         body: body ?? '',
-        multiValueHeaders: unwrapMaybeNullableRecord(multiValueHeaders),
+        multiValueHeaders: unwrapMaybeNullableRecord(multiValueHeaders, t => t),
         isBase64Encoded: false,
     };
 };

@@ -3,7 +3,7 @@ import { APIGatewayProxyEvent, APIGatewayProxyResult } from 'aws-lambda';
 import { Result } from '@vladbasin/ts-result';
 import { RawApiRequestType } from '@vladbasin/strong-api-mapping';
 import { HandleApiRequestOptionsType } from './types';
-import { formatResponse } from '.';
+import { mapRawApiResponseToGwProxyResult } from '.';
 
 export const handleStrongApiLambdaRequest = <
     TRequestPayload,
@@ -28,8 +28,9 @@ export const handleStrongApiLambdaRequest = <
                 handle: request => options.function.executeAsync(request),
             },
             response: options.response,
+            json: options.json,
         })
-            .onSuccess(response => formatResponse(response.raw))
+            .onSuccess(response => mapRawApiResponseToGwProxyResult(response.raw))
             .asPromise();
     };
 };
