@@ -29,7 +29,7 @@ export const handleStrongApiLambdaRequest = <
             },
             response: options.response,
         })
-            .onSuccess(response => formatResponse(response))
+            .onSuccess(response => formatResponse(response.raw))
             .asPromise();
     };
 };
