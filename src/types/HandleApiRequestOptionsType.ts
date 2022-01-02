@@ -9,5 +9,5 @@ export type HandleApiRequestOptionsType<
     function: IFunction<TRequestPayload, TResponseDataPayload, TResponseErrorPayload>;
     request: Pick<StrongApiOptionsType<TRequestPayload>['request'], 'payload'>;
     response: StrongApiOptionsType<TRequestPayload>['response'];
-    json: StrongApiOptionsType<TRequestPayload>['json'];
+    json?: StrongApiOptionsType<TRequestPayload>['json'];
 };
