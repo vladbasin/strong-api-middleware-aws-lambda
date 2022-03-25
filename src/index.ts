@@ -7,4 +7,5 @@ export * from './mapGwProxyResultToRawApiResponse';
 export * from './mapRawApiResponseToGwProxyResult';
 export * from './unwrapMaybeNullableRecord';
 export * from './contracts/index';
+export * from './decorators/index';
 export * from './types/index';
