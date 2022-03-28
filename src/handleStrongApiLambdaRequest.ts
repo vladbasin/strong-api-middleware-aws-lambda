@@ -26,6 +26,8 @@ export const handleStrongApiLambdaRequest = <
                         },
                         custom: {
                             context: { ...context },
+                            requestContext: { ...event.requestContext },
+                            authContext: { ...event.requestContext.authorizer },
                         },
                     }),
                 payload: options.request.payload,
