@@ -1,6 +1,6 @@
 {
     "name": "@vladbasin/strong-api-middleware-aws-lambda",
-    "version": "1.1.4",
+    "version": "1.1.5",
     "description": "Strongly typed API middleware for AWS Lambda",
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",
@@ -35,7 +35,7 @@
         "@typescript-eslint/eslint-plugin": "^5.8.0",
         "@typescript-eslint/parser": "^5.8.0",
         "@vladbasin/strong-api-mapping": "^1.1.5",
-        "@vladbasin/strong-api-middleware": "^1.2.4",
+        "@vladbasin/strong-api-middleware": "^1.2.5",
         "@vladbasin/strong-api-models": "^1.0.3",
         "aws-lambda": "^1.0.7",
         "barrelsby": "^2.2.0",
@@ -61,7 +61,7 @@
     },
     "peerDependencies": {
         "@vladbasin/strong-api-mapping": "^1.1.5",
-        "@vladbasin/strong-api-middleware": "^1.2.4",
+        "@vladbasin/strong-api-middleware": "^1.2.5",
         "@vladbasin/strong-api-models": "^1.0.3",
         "aws-lambda": "^1.0.7",
         "joi": "^17.5.0",
