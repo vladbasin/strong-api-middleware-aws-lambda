@@ -8,6 +8,8 @@ export type HandleApiRequestOptionsType<
 > = {
     function: IFunction<TRequestPayload, TResponseDataPayload, TResponseErrorPayload>;
     request: Pick<StrongApiOptionsType<TRequestPayload>['request'], 'payload'>;
-    response: StrongApiOptionsType<TRequestPayload>['response'];
+    response: StrongApiOptionsType<TRequestPayload>['response'] & {
+        isBase64Encoded?: boolean;
+    };
     json?: StrongApiOptionsType<TRequestPayload>['json'];
 };

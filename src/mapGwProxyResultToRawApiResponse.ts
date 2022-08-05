@@ -15,5 +15,6 @@ export const mapGwProxyResultToRawApiResponse = (response: APIGatewayProxyResult
         headers: unwrapMaybeNullableRecord(headers, t => String(t)),
         body: JSON.stringify(targetBody),
         multiValueHeaders: unwrapMaybeNullableRecord(multiValueHeaders, t => t.map(x => String(x))),
+        isBase64Encoded: response.isBase64Encoded,
     };
 };

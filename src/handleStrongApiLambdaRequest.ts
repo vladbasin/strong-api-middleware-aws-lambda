@@ -36,7 +36,9 @@ export const handleStrongApiLambdaRequest = <
             response: options.response,
             json: options.json,
         })
-            .onSuccess(response => mapRawApiResponseToGwProxyResult(response.raw))
+            .onSuccess(response =>
+                mapRawApiResponseToGwProxyResult({ ...response.raw, isBase64Encoded: options.response.isBase64Encoded })
+            )
             .asPromise();
     };
 };
