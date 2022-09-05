@@ -248,13 +248,13 @@
     "@vladbasin/ts-types" "^1.0.4"
     lodash "^4.17.21"
 
-"@vladbasin/strong-api-middleware@^1.2.5":
-  version "1.2.5"
-  resolved "https://registry.yarnpkg.com/@vladbasin/strong-api-middleware/-/strong-api-middleware-1.2.5.tgz#c34431f23719dddace345b1520e00fc06b6ae741"
-  integrity sha512-mQNbqKgdq6xYH8+1OnViP7bg59AZrg/2iAmd23NNQWcH1LK4PRWl/OZJsmNcl8jWRwMns+yW8SSm+PKmlhywiw==
+"@vladbasin/strong-api-middleware@^1.3.1":
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/@vladbasin/strong-api-middleware/-/strong-api-middleware-1.3.1.tgz#7f050a19697c952b42bf565c678a52c4ab9d917a"
+  integrity sha512-KjAgSBSv7w5S1VDbFwEyLPhUVLC2QJl+wZ2IOVxTC0KEhMDZ9CtpoMMtc8BYiXiL6BLMuLfEOflHjDaQFWSwAw==
   dependencies:
     "@vladbasin/strong-api-constants" "^1.0.0"
-    "@vladbasin/ts-result" "^1.1.10"
+    "@vladbasin/ts-result" "^1.1.11"
     "@vladbasin/ts-types" "^1.0.4"
     lodash "^4.17.21"
     moment "^2.29.1"
@@ -266,10 +266,10 @@
   dependencies:
     "@vladbasin/strong-api-constants" "^1.0.0"
 
-"@vladbasin/ts-result@^1.1.10":
-  version "1.1.10"
-  resolved "https://registry.yarnpkg.com/@vladbasin/ts-result/-/ts-result-1.1.10.tgz#ee4054dda5c423be872d64e646d7efba604bd4d9"
-  integrity sha512-OufX1ush4/LwyNvZ0m5PdmJyzp4AOITGiCINhI/uddQz6E3OoSkM9x/guvrCf/SKWyfUMJ64tQTRF4FcNaNSNg==
+"@vladbasin/ts-result@^1.1.11":
+  version "1.1.11"
+  resolved "https://registry.yarnpkg.com/@vladbasin/ts-result/-/ts-result-1.1.11.tgz#8d54ddb7f5c911d463ddaf7afed5e82f6cbec8da"
+  integrity sha512-iYGUPb3VGoVNo4MXJYOgs1540Ww8KtVtfcAa4ClT2Br1Ot1Xx8RXI6RMSPWeA6NTFoGKM2hXIi4rM8CRWuiznQ==
   dependencies:
     "@vladbasin/ts-types" "^1.0.4"
     lodash "^4.17.21"
