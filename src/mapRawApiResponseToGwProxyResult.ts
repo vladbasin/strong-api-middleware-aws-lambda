@@ -1,8 +1,7 @@
 import { APIGatewayProxyResult } from 'aws-lambda';
-import { RawApiResponseType } from '@vladbasin/strong-api-middleware';
-import { unwrapMaybeNullableRecord } from '.';
+import { RawLambdaApiResponseType, unwrapMaybeNullableRecord } from '.';
 
-export const mapRawApiResponseToGwProxyResult = (response: RawApiResponseType): APIGatewayProxyResult => {
+export const mapRawApiResponseToGwProxyResult = (response: RawLambdaApiResponseType): APIGatewayProxyResult => {
     const { statusCode, headers, multiValueHeaders, body, isBase64Encoded } = response;
 
     return {

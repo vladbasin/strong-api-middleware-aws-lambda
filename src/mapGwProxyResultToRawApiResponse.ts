@@ -1,9 +1,10 @@
-import { ApiResponsePayloadType, RawApiResponseType } from '@vladbasin/strong-api-middleware';
+import { ApiResponsePayloadType } from '@vladbasin/strong-api-middleware';
 import { isNil } from 'lodash';
 import { APIGatewayProxyResult } from 'aws-lambda';
 import { unwrapMaybeNullableRecord } from './unwrapMaybeNullableRecord';
+import { RawLambdaApiResponseType } from './types';
 
-export const mapGwProxyResultToRawApiResponse = (response: APIGatewayProxyResult): RawApiResponseType => {
+export const mapGwProxyResultToRawApiResponse = (response: APIGatewayProxyResult): RawLambdaApiResponseType => {
     const { statusCode, headers, multiValueHeaders, body } = response;
 
     const parsedBody = JSON.parse(body || '') as ApiResponsePayloadType<unknown, unknown>;
